@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link type="image/x-icon" rel="shortcut icon" href="../img/logo.jpg">
+    <style>
+        body {
+            background-image: linear-gradient(to right, #ff96c2, #6fb9ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .login-bj {
+            width: 300px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 3px 3px 10px #000;
+            border-radius: 10px;
+        }
+        
+        .login-bj form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .login-bj input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+        }
+        
+        .login-bj span {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .login-bj .dl {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        
+        .login-bj .dl:hover {
+            background-color: #0056b3;
+        }
+        
+        .dl-jz {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <title>登录面板</title>
+</head>
+<body>
+    <div class="login-bj">
+        <form class="username_xkey" method="post" action="login.php">
+            <span class="login">麟盾·软麟panel</span>
+            <input class="username" placeholder="账号" name="username" type="text"/>
+            <input class="xkey" placeholder="KYE" name="xkey" type="password"/>
+            <div class="dl-jz">
+                <input class="dl" value="验证" type="submit"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* 设置页面全局字体 */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/*导航栏样式代码，简洁风格*/
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 999;
+}
+
+.nav-link {
+    color: #0078d4;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #005a9e;
+}
+
+.container {
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.app-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.app-card {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* 底部外边距*/
+    margin-right: 10px; /* 右侧外边距*/
+}
+
+.app-card-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-title {
+    font-weight: bold;
+}
+
+.download-btn {
+    background-color: #0078d4;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.download-btn:hover {
+    background-color: #005a9e;
+}
+
+.app-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-icon {
+    width: 50px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+}
+
+.bold-label {
+    font-weight: bold;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .app-card {
+        flex-direction: column;
+    }
+    .app-card-details img.app-icon {
+        max-width: 100%;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover,
+.pagination a.active {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.jump-to-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.jump-to-page input[type="number"] {
+    width: 50px;
+    margin-right: 10px;
+}

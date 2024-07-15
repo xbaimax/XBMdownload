@@ -1,0 +1,30 @@
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gitee-link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.gitee-logo {
+    width: 32px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.gitee-text {
+    color: black;
+    margin: 0;
+}
+
+.copyright {
+    margin: 0;
+}

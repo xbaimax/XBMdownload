@@ -1,0 +1,125 @@
+body {
+				background: linear-gradient(to bottom, white 0%, lightblue 100%);
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				/* 以下是为了兼容不同浏览器 */
+				-webkit-background: linear-gradient(to bottom, white 0%, lightblue 100%);
+				-moz-background: linear-gradient(to bottom, white 0%, lightblue 100%);
+				-o-background: linear-gradient(to bottom, white 0%, lightblue 100%);
+			}
+
+			#left_choice_menu {
+				position: fixed;
+				top: 3%;
+				left: 1%;
+				width: 250px;
+				height: 94%;
+				background-color: white;
+				border-radius: 10px;
+				box-shadow: 3px 3px 8px lightgray;
+			}
+
+			#center_show_choice {
+				position: fixed;
+				top: 3%;
+				left: calc(3vw + 240px);
+				width: calc(100vw - 240px - 4vw);
+				height: 94%;
+				background-color: white;
+				border-radius: 10px;
+				box-shadow: 3px 3px 8px lightgray;
+			}
+
+			#left_choice_menu_logo_contral {
+				margin-top: 30px;
+				margin-bottom: 30px;
+				text-align: center;
+			}
+
+			#left_choice_menu_logo {
+				max-width: 90px;
+
+			}
+
+			#left_choice_menu_option {
+				margin-top: 40px;
+				text-align: center;
+			}
+
+			.left_choice_menu_option_alldiv {
+				cursor: pointer;
+				margin-top: 30px;
+				margin-bottom: 30px;
+				margin-left: 50px;
+				margin-right: 50px;
+				padding-top:10px;
+				padding-bottom:10px;
+				border-radius: 8px;
+			}
+
+			.left_choice_menu_option_allimg {
+				max-width: 20px;
+			}
+
+			.left_choice_menu_option_allspan {
+				margin-left: 10px;
+				font-size: 20px;
+				font-weight:bold;
+			}
+			
+			.click{
+				cursor: pointer;
+				margin-top: 30px;
+				margin-bottom: 30px;
+				margin-left: 50px;
+				margin-right: 50px;
+				padding-top:10px;
+				padding-bottom:10px;
+				border-radius: 8px;
+				background-color:#f1f0f0;
+				
+			}
+			
+			#div1_zckf{
+				background-color: #f1f0f0;
+				margin: 2%;
+				margin-bottom: 1%;
+				width:96%;
+				height:32%;
+				border-radius: 14px;
+			}
+			
+			.zckf_h1{
+				margin-left:40px;
+				padding-top:20px;
+			}
+			
+			.zckf_img{
+				cursor: pointer;
+				max-width:70px;
+				margin:10px;
+				margin-left:50px;
+			}
+			
+			#div_gzwm{
+				background-color: #f1f0f0;
+				margin: 2%;
+				margin-top: 1%;
+				width:96%;
+				height:60%;
+				border-radius: 14px;
+			}
+			
+			.gywm_span{
+				margin-left:60px;
+				vertical-align: top;
+				font-size:22px;
+				font-weight: bolder;
+			}
+			
+			
+			.gywm_img{
+				cursor: pointer;
+				margin-left:20px;
+				max-width:32px;
+			}

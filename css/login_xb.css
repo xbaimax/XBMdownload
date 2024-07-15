@@ -1,0 +1,30 @@
+.login-bj{
+  opacity:0.8;
+  padding:30px;
+  /*background-color:yellow;*/
+  width:230px;
+  margin:100px auto;
+  }
+.username,.xkey{
+  text-align:center;
+  border-radius:20px;
+  font-size:18px;
+  margin:10px auto;
+  width:100%;
+  }
+.dl{
+  background-color:#fff;
+  font-size:14px;
+  border-radius:14px;
+  padding:5px 20px;
+  font-weight:900;
+  }
+.dl:hover{
+  background-color:#c8facc;
+  }
+.dl-jz{
+  text-align:center;
+  }
+.login{
+  font-weight:900;
+  }

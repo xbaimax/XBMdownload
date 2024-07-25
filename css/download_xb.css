@@ -56,18 +56,26 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px; /* 底部外边距*/
+    margin-bottom: 20px; /* 底部外边距*/
     margin-right: 10px; /* 右侧外边距*/
+    cursor: pointer;
 }
 
 .app-card-details {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
 }
 
 .app-title {
     font-weight: bold;
+    margin: 0;
+}
+
+.app-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 .download-btn {
@@ -79,6 +87,12 @@ body {
     display: inline-block;
     border-radius: 5px;
     transition: background-color 0.2s ease-in-out;
+    display: block;
+    margin-top: 10px;
+}
+
+.download-btn a {
+    pointer-events: auto;
 }
 
 .download-btn:hover {
@@ -93,7 +107,9 @@ body {
 
 .app-icon {
     width: 50px;
-    height: auto;
+    height: 50px;
+    margin-right: 10px;
+    flex-shrink: 0;
 }
 
 footer {
@@ -154,4 +170,24 @@ body, html {
 .jump-to-page input[type="number"] {
     width: 50px;
     margin-right: 10px;
+}
+
+.custom-link {
+    text-decoration: none;       /* 去除下划线 */
+    color: #1a73e8;              /* 链接文字颜色 */
+    font-weight: bold;           /* 加粗文字 */
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.custom-link:hover {
+    border-color: #1a73e8;
+}
+
+.navbar a:hover {
+    color: #0056b3;
+}
+
+.navbar button:hover {
+    background-color: #0056b3;
 }

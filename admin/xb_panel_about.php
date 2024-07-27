@@ -60,7 +60,7 @@ if(isset($_COOKIE['xb_xkey'])){
 				<h1 class="zckf_h1">支持开发</h1>
 				<p style="margin-left:40px;color:gray">我们将一直保持开源,向开发者捐赠以表示支持！</p>
 				<a href="gift.html"><img src="../img/wx.png" class="zckf_img"></a>
-				<a href="https://afdian.net/a/ibaizhan"><img src="../img/aifadian.svg" class="zckf_img"></a>
+				<a href="https://afdian.com/a/ibaizhan"><img src="../img/aifadian.svg" class="zckf_img"></a>
 			</div>
 			<div id="div_gzwm">
 				<h1 class="zckf_h1">关于我们</h1>

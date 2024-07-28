@@ -21,7 +21,6 @@ $mobileImageLinks = [   // 手机端图片链接
 $desktopImageLinks = [  // 电脑端图片链接
     'https://dimg04.tripcdn.com/images/0Z00z224x8vhzog8j479E.jpg',
     'https://dimg04.tripcdn.com/images/0Z01i424x8u23hvu46C08.jpg',
-    'https://dimg04.tripcdn.com/images/0Z03s224x8vi0ou3x8082.jpg',
     'https://dimg04.tripcdn.com/images/0Z016224x8vi11hk521AB.jpg',
     'https://dimg04.tripcdn.com/images/0Z00w224x8vi0q66y6C08.jpg',
     'https://dimg04.tripcdn.com/images/0Z004224x8vi19wzhF508.jpg',

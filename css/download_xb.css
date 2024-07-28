@@ -50,15 +50,32 @@ body {
     margin: 40px 0;
 }
 
+
 .app-card {
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    max-width: 823px; /* 电脑端卡片长度设定为823 */
+    margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px; /* 底部外边距*/
     margin-right: 10px; /* 右侧外边距*/
     cursor: pointer;
+}
+@media (max-width: 768px) {
+    .app-card {
+        backdrop-filter: blur(5px);
+        max-width: 90%; /* 手机端卡片长度比例设定为90% */
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* 底部外边距*/
+        margin-right: 10px; /* 右侧外边距*/
+        cursor: pointer;
+    }
 }
 
 .app-card-details {

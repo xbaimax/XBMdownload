@@ -195,6 +195,5 @@ function confirmDelete(id) {
 }
 </script>
 		<script src="../js/menu.js"></script>
-		<script src="../js/trnext.js"></script>
 	</body>
 </html>

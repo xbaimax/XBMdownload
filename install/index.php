@@ -118,6 +118,14 @@ if (file_exists('../data/Safety_lock')) {
                         echo "<input class='install-btn' value='确认覆盖' type='submit' name='confirm_overwrite'>";
                     } else {
                         // 数据库没有数据或用户确认覆盖，直接继续安装
+                        // 清空数据库中的所有表
+                        if (isset($_POST['confirm_overwrite'])) {
+                            $tables = $db->query("SHOW TABLES");
+                            while ($table = $tables->fetch_row()) {
+                                $db->query("DROP TABLE IF EXISTS `{$table[0]}`");
+                            }
+                        }
+
                         // 读取并执行SQL文件
                         $sql_file = 'install.sql';
                         if (file_exists($sql_file)) {

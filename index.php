@@ -1,11 +1,12 @@
 <?php
-require_once "mysql_xb/mysql.php";
-
 // 判断Safety_lock文件是否存在
 if (!file_exists('data/Safety_lock')) {
     header('Location: install/index.php');
     exit();
 }
+?>
+<?php
+require_once "mysql_xb/mysql.php";
 
 // 访问统计函数
 function incrementVisitCount() {

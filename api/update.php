@@ -41,7 +41,7 @@ function compareVersions($remote_version, $local_version) {
 $file_url = 'https://gitee.com/api/v5/repos/ibaizhan/XBMdownload/contents/%E7%89%88%E6%9C%AC%E5%8F%B7.txt';
 
 // 本地版本号
-$local_version = '1.0.0'; // 这里直接设置本地版本号
+$local_version = '1.2.0';
 
 // 获取远程版本号
 $remote_version = getRemoteVersion($file_url);

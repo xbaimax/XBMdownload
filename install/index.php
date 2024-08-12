@@ -1,9 +1,5 @@
 <?php
-require_once '../api/WAF_IP.php';  //调用IP防火墙检测,做备用手动安全防护
-
-checkBlacklistAndRespond();
-
-// 判断Safety_lock文件是否存在
+// 判断Safety_lock文件是否存在(防止重复安装)
 if (file_exists('../data/Safety_lock')) {
     header('Location: /');
     exit();

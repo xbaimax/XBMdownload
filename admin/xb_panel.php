@@ -140,15 +140,67 @@ if(isset($_COOKIE['xb_xkey'])){
 		</div>
 
 		<div id="center_show_choice">
-		<p class="three-point-font">你说巧不巧，我首页没做！</p>
-		<p class="three-point-font">嗯？空着确实不太好，要不我们一点留些彩蛋吧</p>
-		<p class="three-point-font">对！“亿”点彩蛋</p>
-		<p class="three-point-font">彩蛋1，MD5：e78b96a52d3d5f04</p>
-		<p class="three-point-font">彩蛋2，下载链接：https://cccimg.com/down.php/6270d1016382d1c2d85a71ecb293656b.zip</p>
-		<p class="three-point-font">彩蛋2的下载密码暗语：小米的初心价</p>
-		<div class="three-point-font">彩蛋3，粉蝶花之语</div>
-		<div class="three-point-font">不写了，不写了。。。（被林揍.ing）</div>
-		<div class="three-point-font">说明：彩蛋内容并不单独归于一人</div>
+			<?php
+			// 获取远程版本号
+			function getRemoteVersion($file_url) {
+				// 初始化cURL会话
+				$ch = curl_init();
+
+				// 设置cURL选项
+				curl_setopt($ch, CURLOPT_URL, $file_url);
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+				// 执行cURL请求
+				$file_content = curl_exec($ch);
+
+				// 检查cURL请求是否成功
+				if ($file_content === FALSE) {
+					return false;
+				} else {
+					// 解析JSON响应
+					$file_info = json_decode($file_content, true);
+
+					// 检查是否成功解析JSON
+					if (json_last_error() === JSON_ERROR_NONE && isset($file_info['content'])) {
+						// 解码Base64编码的内容
+						$decoded_content = base64_decode($file_info['content']);
+						return $decoded_content;
+					} else {
+						return false;
+					}
+				}
+
+				// 关闭cURL会话
+				curl_close($ch);
+			}
+
+			// 对比版本号
+			function compareVersions($remote_version, $local_version) {
+				return version_compare($remote_version, $local_version, '>');
+			}
+
+			// Gitee仓库的API URL
+			$file_url = 'https://gitee.com/api/v5/repos/ibaizhan/XBMdownload/contents/%E7%89%88%E6%9C%AC%E5%8F%B7.txt';
+
+			// 本地版本号
+			$local_version = '1.2.0';
+
+			// 获取远程版本号
+			$remote_version = getRemoteVersion($file_url);
+
+			// 检查是否成功获取版本号
+			if ($remote_version !== false) {
+				// 对比版本号
+				if (compareVersions($remote_version, $local_version)) {
+					echo "<p class='three-point-font'>有新版本可用，远程版本号: " . $remote_version . "，本地版本号: " . $local_version . "</p>";
+					echo "<a href='https://gitee.com/ibaizhan/XBMdownload' target='_blank' class='three-point-font'>点击这里访问仓库</a>";
+				} else {
+					echo "<p class='three-point-font'>当前已是最新版本，本地版本号: " . $local_version . "</p>";
+				}
+			} else {
+				echo "<p class='three-point-font'>无法获取版本号。</p>";
+			}
+			?>
 		</div>
 	</body>
 	<script src="../js/menu.js"></script>

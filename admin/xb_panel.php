@@ -183,7 +183,7 @@ if(isset($_COOKIE['xb_xkey'])){
 			$file_url = 'https://gitee.com/api/v5/repos/ibaizhan/XBMdownload/contents/%E7%89%88%E6%9C%AC%E5%8F%B7.txt';
 
 			// 本地版本号
-			$local_version = '1.2.0';
+			$local_version = '1.2.1';
 
 			// 获取远程版本号
 			$remote_version = getRemoteVersion($file_url);

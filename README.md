@@ -24,3 +24,5 @@ Nginx + PHP72 + Mysql5.7
 2.官方Q群:767723753
 
 3.官方频道：@ixbgx
+
+4.官方仓库地址：[Gitee](https://gitee.com/ibaizhan/XBMdownload) & [Github](https://github.com/xbaimax/XBMdownload)
